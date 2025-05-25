@@ -1,0 +1,173 @@
+/* Base reset and fonts */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f2f4f7;
+  color: #333;
+}
+
+.container {
+  max-width: 700px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #4a90e2;
+}
+
+/* Form styles */
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+input[type="text"],
+select {
+  padding: 10px;
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #357ab7;
+}
+
+/* Task list */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #f9fafc;
+  border: 1px solid #e1e4e8;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+li form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+li input[type="text"] {
+  width: 200px;
+  min-width: 100px;
+}
+
+li select {
+  width: 120px;
+  min-width: 80px;
+}
+
+/* Icons */
+li button {
+  font-size: 18px;
+  padding: 5px 10px;
+}
+
+/* Alert styling */
+.alert {
+  padding: 10px 15px;
+  background-color: #fdecea;
+  color: #d93025;
+  border: 1px solid #f5c6cb;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+/* Responsive Media Queries */
+
+/* Tablets and below */
+@media (max-width: 768px) {
+  .container {
+    margin: 20px 15px;
+    padding: 20px;
+  }
+
+  form {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  input[type="text"],
+  select,
+  button {
+    width: 100%;
+    flex: none;
+  }
+
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  li form {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  li input[type="text"],
+  li select {
+    width: 100%;
+  }
+
+  li button {
+    align-self: flex-end;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  input[type="text"],
+  select,
+  button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  li button {
+    font-size: 16px;
+    padding: 5px 8px;
+  }
+
+  .alert {
+    font-size: 14px;
+  }
+}
